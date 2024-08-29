@@ -9,3 +9,16 @@ from diffusers import DiffusionPipeline, StableDiffusionXLImg2ImgPipeline, Stabl
 from diffusers.utils import load_image
 from annoy import AnnoyIndex
 import torch, random
+
+clip_model = CLIPTextModel.from_pretrained("/workspace/data/models/converted", torch_dtype=torch.float16)
+clip_processor = CLIPTokenizer.from_pretrained("/workspace/data/models/converted")
+pipeline = DiffusionPipeline.from_pretrained(
+    "runwayml/stable-diffusion-v1-5",
+    text_encoder = clip_model,
+    tokenizer = clip_processor,
+    torch_dtype=torch.float16
+).to("cuda")
+
+pipeline.unet = torch.compile(pipeline.unet, mode = "reduce-overhead", fullgraph = True)
+pipeline.vae = torch.compile(pipeline.vae, mode = "reduce-overhead", fullgraph = True)
+pipeline.text_encoder = torch.compile(pipeline.text_encoder, mode = "reduce-overhead", fullgraph = True)
