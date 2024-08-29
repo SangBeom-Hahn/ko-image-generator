@@ -22,3 +22,8 @@ pipeline = DiffusionPipeline.from_pretrained(
 pipeline.unet = torch.compile(pipeline.unet, mode = "reduce-overhead", fullgraph = True)
 pipeline.vae = torch.compile(pipeline.vae, mode = "reduce-overhead", fullgraph = True)
 pipeline.text_encoder = torch.compile(pipeline.text_encoder, mode = "reduce-overhead", fullgraph = True)
+
+refiner = StableDiffusionXLImg2ImgPipeline.from_pretrained(
+    "stabilityai/stable-diffusion-xl-refiner-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16"
+).to("cuda")
+refiner.unet = torch.compile(refiner.unet, mode="reduce-overhead", fullgraph=True)
