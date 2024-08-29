@@ -20,7 +20,7 @@ def create_vector_database():
 
         (prompt_embeds, _) = pipeline.encode_prompt(generate_prompt, "cuda", num_images_per_prompt=1, do_classifier_free_guidance=False)
         prompt_embeds = prompt_embeds.flatten()
-        annoy_index.add_item(idx, prompt_embeds)
+        database.add_item(idx, prompt_embeds)
 
-    annoy_index.build(10)
-    annoy_index.save('hanbok.annoy')
+    database.build(TREE_SIZE)
+    database.save('hanbok.annoy')

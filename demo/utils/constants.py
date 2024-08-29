@@ -34,6 +34,7 @@ SIMILARITY: Final = 'dot'
 VECTOR_SIZE: Final = 59136
 DB_NAME: Final = 'hanbok.annoy'
 SEARCH_SIZE: Final = 3
+TREE_SIZE:Final = 10
 
 prompt_descriptions: Final = [
     "분홍색 가방을 들고 한복을 입은 여자가 다리 위에 서 있습니다.",
