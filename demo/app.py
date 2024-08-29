@@ -27,3 +27,12 @@ refiner = StableDiffusionXLImg2ImgPipeline.from_pretrained(
     "stabilityai/stable-diffusion-xl-refiner-1.0", torch_dtype=torch.float16, use_safetensors=True, variant="fp16"
 ).to("cuda")
 refiner.unet = torch.compile(refiner.unet, mode="reduce-overhead", fullgraph=True)
+
+regenerator = StableDiffusionImg2ImgPipeline.from_pretrained(
+    "runwayml/stable-diffusion-v1-5",
+    text_encoder = clip_model,
+    tokenizer = clip_processor,
+    torch_dtype=torch.float16
+).to("cuda")
+
+regenerator.unet = torch.compile(regenerator.unet, mode="reduce-overhead", fullgraph=True)
