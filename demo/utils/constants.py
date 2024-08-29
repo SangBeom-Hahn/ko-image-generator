@@ -1,15 +1,22 @@
 from typing import Final
-import torch
+import torch, random
 
-STATIC: Final = '/workspace/hsb/static'
+STATIC: Final = '/workspace/hsb/k-contents/demo/static'
+ROOT: Final = "/workspace/hsb/k-contents/demo"
 
 NUM_INFERECEN_STEPS: Final = 40
 GUIDANCE_SCALE: Final = 7.5
 SEED: Final = torch.manual_seed(1147446245)
+IMAGE_TO_IMAGE_COUNT: Final = 6
+STRENGTH: Final = 0.75
+
+RAND: int = random.randint(0, 2**32 - 1)
+
 
 REFINE_PROMPT: Final = "Realistic, Masterpiece , Photo, Super resolution , High Quality"
 REFINE_NEG: Final = "(open mouth),[lowres],[smartphone camera], [amateur camera],[3d render],[sepia],((anime)),((drawn)),(paint),(teeth), deformed, bad body proportions, mutation, (ugly), disfigured,(string)"
 COMMON_NEG: Final = "불완전한 신체 구조, 불명확, 잘림, 왜곡, 복사, 실수, 추가 팔, 추가 다리, 불쾌한 비율, 긴 목, 저급, 저해상도, 팔 다리 부족, 건강하지 않음, 유전적 변이, 프레임을 벗어남, 텍스트 삽입, 매력적이지 않음, 최저 품질"
+STATIC_TEXT: Final = "static"
 
 LORA_WEIGHTS: Final = {
     "기본 SD 1.5": None,
