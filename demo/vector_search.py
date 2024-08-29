@@ -4,7 +4,9 @@ from utils import *
 def load_vector_database():
     stored_annoy = AnnoyIndex(VECTOR_SIZE, SIMILARITY)
     stored_annoy.load(DB_NAME)
+    return stored_annoy
 
 def search_process(prompt_embeds):
+    database = load_vector_database()
     prompt_embeds = prompt_embeds.flatten()
     return database.get_nns_by_vector(prompt_embeds, SEARCH_SIZE)

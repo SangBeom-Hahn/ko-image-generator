@@ -98,10 +98,9 @@ def imageToimage():
 
 @app.route("/search", methods=["POST"])
 def search():
-    database = load_vector_database()
     search_prompt = extract_search_request_message()
-
     (prompt_embeds, _) = pipeline.encode_prompt(search_prompt, CUDA, num_images_per_prompt = PER_COUNT, do_classifier_free_guidance = False)
+    
     result_idxs = search_process(prompt_embeds)
     image_paths = get_similar_images_paths(result_idxs)
 
