@@ -2,16 +2,13 @@ from typing import Final
 import torch, random
 
 STATIC: Final = '/workspace/hsb/k-contents/demo/static'
-ROOT: Final = "/workspace/hsb/k-contents/demo"
+ROOT: Final = "/workspace/hsb/k-contents/demo/static/"
 
 NUM_INFERECEN_STEPS: Final = 40
 GUIDANCE_SCALE: Final = 7.5
 SEED: Final = torch.manual_seed(1147446245)
 IMAGE_TO_IMAGE_COUNT: Final = 6
 STRENGTH: Final = 0.75
-
-RAND: int = random.randint(0, 2**32 - 1)
-
 
 REFINE_PROMPT: Final = "Realistic, Masterpiece , Photo, Super resolution , High Quality"
 REFINE_NEG: Final = "(open mouth),[lowres],[smartphone camera], [amateur camera],[3d render],[sepia],((anime)),((drawn)),(paint),(teeth), deformed, bad body proportions, mutation, (ugly), disfigured,(string)"
