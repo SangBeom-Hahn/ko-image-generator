@@ -45,7 +45,7 @@
 
 ## Model
 
-![project_pipeline](https://github.com/SangBeom-Hahn/Sketch2Fashion/blob/main/assests/model.png)
+![project_pipeline](https://github.com/SangBeom-Hahn/ko-image-generator/blob/main/assets/pipeline.jpg)
 
 - Image Generate
 
