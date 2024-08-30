@@ -9,26 +9,26 @@
 
 ### Text to Image
 <p align ="center">
-  <img src = "https://user-images.githubusercontent.com/90328527/222012872-e316b82f-9974-4d4f-a012-0e8dc9f042ce.gif">
+  <img src = "https://github.com/user-attachments/assets/ab1bf4ba-5b94-4439-aec0-d31591079c7d">
 </p>
 
 <p align ="center">
-  <img src = "https://user-images.githubusercontent.com/90328527/222012941-c73322ef-4afa-4ec6-8bab-915aa5fa79e7.gif">
+  <img src = "https://github.com/user-attachments/assets/b62c9331-7151-4837-b534-7dc25d155f1d">
 </p>
 
 ### Image to Image
 <p align ="center">
-  <img src = "https://user-images.githubusercontent.com/90328527/222012981-040a0d12-5a36-40b6-8187-d2e9121db740.gif">
+  <img src = "https://github.com/user-attachments/assets/0efd9920-0920-4dcd-a1d5-d5cbc95ddbf1">
 </p>
 
 <p align ="center">
-  <img src = "https://user-images.githubusercontent.com/90328527/222013017-29ead234-71a9-4839-915c-5d2f8014a416.gif">
+  <img src = "https://github.com/user-attachments/assets/de3e38e1-33cf-4a41-b3ed-8ad7224e62b6">
 </p>
 
 
 ### Vector Search
 <p align ="center">
-  <img src = "https://user-images.githubusercontent.com/90328527/222012066-38554844-548d-4cd9-8ae7-bc7c8fbb61c0.gif">
+  <img src = "https://github.com/user-attachments/assets/c48a7e5f-2568-4c4a-8e94-a3620f0e06c9">
 </p>
 
 ## Dataset
