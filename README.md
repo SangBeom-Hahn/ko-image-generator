@@ -49,7 +49,12 @@
 
 - Image Generate
 
-전체적인 파이프라인은 2 stage로 이루어져 있다. 1단계는 Text To Image 이미지 생성기를 통해 이미지를 생성한다. 2단계에서는 SDXL Image2Image Refiner로 1단계에서 나온 결과물을 정제하여 이미지 퀄리티를 증가시킨다. (추론 시간 : 약 4초 소요, VRAM 소모량 : 2.6GB)
+전체적인 파이프라인은 2 stage로 이루어져 있다. 1단계는 Text To Image 이미지 생성기를 통해 이미지를 생성한다. 2단계에서는 SDXL Image2Image Refiner로 1단계에서 나온 결과물을 정제하여 이미지 퀄리티를 증가시킨다. 
+
+```
+추론 시간 : 약 4초 소요 (기존 대비 32% 감소)
+VRAM 소모량 : 2.6GB (기존 대비 13% 감소
+```
 
 - Vector Search
 
